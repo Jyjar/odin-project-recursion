@@ -11,6 +11,8 @@ function fibs(n) {
 }
 
 function fibsRec(n, fibs = [0, 1]) {
+    console.log("This was printed recursively");
+
     if (n <= fibs.length) {
         return fibs.slice(0, n);
     } else {
@@ -18,3 +20,5 @@ function fibsRec(n, fibs = [0, 1]) {
         return fibsRec(n, fibs);
     }
 }
+
+console.log(fibsRec(8));
